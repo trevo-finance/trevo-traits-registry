@@ -1,0 +1,41 @@
+{
+    "$id": "https://trevo-finance.github.io/trevo-traits-registry/traits/metadata_schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Metadata of on-chain entity",
+    "description": "Metadata of an on-chain entity, such as token, NFT, AppAgent etc.",
+    "type": "object",
+    "properties": {
+      "metadata_id": {
+        "description": "The identifier of the document with metadata. Depending on the context, this can be an identifier of on-chain entity, that metadata annotates. Or it can be an application-specific identifier.",
+        "type": "string",
+        "minLength": 5,
+        "maxLength": 128
+      },
+      "title": {
+        "description": "The human readable title of the document with metadata.",
+        "type": "string",
+        "minLength": 5,
+        "maxLength": 128
+      },
+      "description": {
+        "description": "The human readable description of the metadata document.",
+        "type": "string",
+        "maxLength": 1024
+      },
+      "traits": {
+        "description": "The list of traits supported by on-chain entity, that is annotated with this metadata document.",
+        "type": "object",
+        "minProperties": 1,
+        "propertyNames": {
+          "type": "string",
+          "minLength": 5,
+          "maxLength": 128
+        },
+        "patternProperties": {
+          "^.*$": { "type": "object" }
+        }
+      }
+    },
+    "required": [ "metadata_id", "title", "traits" ],
+    "additionalProperties": false
+}

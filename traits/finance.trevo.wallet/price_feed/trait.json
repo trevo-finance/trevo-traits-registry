@@ -1,0 +1,34 @@
+{
+    "$id": "https://trevo-finance.github.io/trevo-traits-registry/traits/finance.trevo.wallet/price_feed/trait.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Information to get current price of the asset",
+    "description": "This trait provides the information that allows to fetch current price of the asset.",
+    "type": "object",
+    "properties": {
+      "current_price": {
+        "description": "Information to get current price of the asset.",
+        "oneOf": [
+          { "$ref": "#/$defs/tiingo" }
+        ]
+      }
+    },
+    "required": [ "current_price" ],
+    "$defs": {
+      "tiingo": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "const": "tiingo"
+          },
+          "ticker": {
+            "description": "The ticker of the asset.",
+            "minLength": 1,
+            "maxLength": 32
+          }
+        },
+        "required": [ "source", "ticker" ],
+        "additionalProperties": false
+      }
+    },
+    "additionalProperties": false
+}

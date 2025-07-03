@@ -1,0 +1,176 @@
+{
+    "$id": "https://trevo-finance.github.io/trevo-traits-registry/traits/finance.trevo.wallet/nft_token_attributes/trait.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "NFT attributes",
+    "description": "Attributes of an NFT displayed on the token' page.",
+    "type": "object",
+    "properties": {
+      "attributes": {
+        "description": "The list of NFT attributes.",
+        "type": "array",
+        "items": {
+          "oneOf": [
+            { "$ref": "#/$defs/nft_attribute_number" },
+            { "$ref": "#/$defs/nft_attribute_percentage" },
+            { "$ref": "#/$defs/nft_attribute_string" },
+            { "$ref": "#/$defs/nft_attribute_boolean" },
+            { "$ref": "#/$defs/nft_attribute_date" },
+            { "$ref": "#/$defs/nft_attribute_duration" }
+          ]
+        },
+        "minItems": 1
+      }
+    },
+    "required": [ "attributes" ],
+    "$defs": {
+      "nft_attribute_number": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "The name of the attribute.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 32
+          },
+          "display_type": {
+            "description": "The type of the attribute.",
+            "type": "string",
+            "enum": [ "number" ]
+          },
+          "value": {
+            "description": "The value of the attribute.",
+            "type": "number"
+          }
+        },
+        "required": [ "name", "display_type", "value" ],
+        "additionalProperties": false
+      },
+      "nft_attribute_percentage": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "The name of the attribute.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 32
+          },
+          "display_type": {
+            "description": "The type of the attribute.",
+            "type": "string",
+            "enum": [ "percentage" ]
+          },
+          "value": {
+            "description": "The value of the attribute.",
+            "type": "number",
+            "minimum": -100,
+            "maximum": 100
+          }
+        },
+        "required": [ "name", "display_type", "value" ],
+        "additionalProperties": false
+      },
+      "nft_attribute_string": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "The name of the attribute.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 32
+          },
+          "display_type": {
+            "description": "The type of the attribute.",
+            "type": "string",
+            "enum": [ "string" ]
+          },
+          "value": {
+            "description": "The value of the attribute.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 32
+          }
+        },
+        "required": [ "name", "display_type", "value" ],
+        "additionalProperties": false
+      },
+      "nft_attribute_boolean": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "The name of the attribute.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 32
+          },
+          "display_type": {
+            "description": "The type of the attribute.",
+            "type": "string",
+            "enum": [ "boolean" ]
+          },
+          "value": {
+            "description": "The value of the attribute.",
+            "type": "boolean"
+          }
+        },
+        "required": [ "name", "display_type", "value" ],
+        "additionalProperties": false
+      },
+      "nft_attribute_date": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "The name of the attribute.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 32
+          },
+          "display_type": {
+            "description": "The type of the attribute.",
+            "type": "string",
+            "enum": [ "date" ]
+          },
+          "value": {
+            "description": "The value of the attribute.",
+            "type": "string",
+            "anyOf": [
+              { 
+                "format": "date-time"
+              },
+              { 
+                "format": "date"
+              },
+              { 
+                "format": "time"
+              }
+            ]
+          }
+        },
+        "required": [ "name", "display_type", "value" ],
+        "additionalProperties": false
+      },
+      "nft_attribute_duration": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "The name of the attribute.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 32
+          },
+          "display_type": {
+            "description": "The type of the attribute.",
+            "type": "string",
+            "enum": [ "duration" ]
+          },
+          "value": {
+            "description": "The value of the attribute.",
+            "type": "string",
+            "format": "duration"
+          }
+        },
+        "required": [ "name", "display_type", "value" ],
+        "additionalProperties": false
+      }
+    },
+    "additionalProperties": false
+}

@@ -1,0 +1,17 @@
+{
+    "$id": "https://trevo-finance.github.io/trevo-traits-registry/traits/finance.trevo.wallet/nft_token_cover_image/trait.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "NFT cover image",
+    "description": "NFT image used on the page with the details of the token. Expected size of the image: 2048x2048px. Suported formats: WebP, PNG / APNG, JPEG / JPG, GIF, SVG.",
+    "type": "object",
+    "properties": {
+      "image_url": {
+        "description": "The link to the file with the image.",
+        "type": "string",
+        "format": "url",
+        "maxLength": 256
+      }
+    },
+    "required": [ "image_url" ],
+    "additionalProperties": false
+}

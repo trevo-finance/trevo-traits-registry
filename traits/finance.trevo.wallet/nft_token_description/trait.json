@@ -1,0 +1,16 @@
+{
+  "$id": "https://trevo-finance.github.io/trevo-traits-registry/traits/finance.trevo.wallet/nft_token_description/trait.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Description of the NFT token.",
+  "description": "The trait provides description of the NFT token displayed to the user in TRAIT wallet.",
+  "type": "object",
+  "properties": {
+    "nft_token_description": {
+      "description": "Description of the NFT token displayed to the user. It should be a plain text.",
+      "type": "string",
+      "maxLength": 4096
+    }
+  },
+  "required": [ "nft_token_description" ],
+  "additionalProperties": false
+}

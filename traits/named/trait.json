@@ -1,0 +1,17 @@
+{
+    "$id": "https://trevo-finance.github.io/trevo-traits-registry/traits/named/trait.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Name of an on-chain entity",
+    "description": "This trait provides the name of an on-chain entity.",
+    "type": "object",
+    "properties": {
+      "name": {
+        "description": "The name of the object.",
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 32
+      }
+    },
+    "required": [ "name" ],
+    "additionalProperties": false
+}

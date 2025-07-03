@@ -1,0 +1,59 @@
+{
+    "version": "1.1.0",
+    "registry": [
+        {
+            "trait_id": "named",
+            "specification": "https://trevo-finance.github.io/trevo-traits-registry/traits/named/trait.json",
+            "description": "Name of an on-chain entity.",
+            "status": "active"
+        },
+        {
+            "trait_id": "fungible",
+            "specification": "https://trevo-finance.github.io/trevo-traits-registry/traits/fungible/trait.json",
+            "description": "Details of a fungible token.",
+            "status": "active"
+        },
+        {
+            "trait_id": "finance.trevo.wallet.square_icon",
+            "specification": "https://trevo-finance.github.io/trevo-traits-registry/traits/finance.trevo.wallet/square_icon/trait.json",
+            "description": "Small squre icon.",
+            "status": "active"
+        },
+        {
+            "trait_id": "finance.trevo.wallet.nft_collection_listing_image",
+            "specification": "https://trevo-finance.github.io/trevo-traits-registry/traits/finance.trevo.wallet/nft_collection_listing_image/trait.json",
+            "description": "NFT image used in the list of NFT collections.",
+            "status": "active"
+        },
+        {
+            "trait_id": "finance.trevo.wallet.nft_token_listing_image",
+            "specification": "https://trevo-finance.github.io/trevo-traits-registry/traits/finance.trevo.wallet/nft_token_listing_image/trait.json",
+            "description": "NFT image used in the list of NFTs.",
+            "status": "active"
+        },
+        {
+            "trait_id": "finance.trevo.wallet.nft_token_cover_image",
+            "specification": "https://trevo-finance.github.io/trevo-traits-registry/traits/finance.trevo.wallet/nft_token_cover_image/trait.json",
+            "description": "NFT image used on the page with the details of the token.",
+            "status": "active"
+        },
+        {
+            "trait_id": "finance.trevo.wallet.nft_token_description",
+            "specification": "https://trevo-finance.github.io/trevo-traits-registry/traits/finance.trevo.wallet/nft_token_description/trait.json",
+            "description": "Description of the NFT token displayed on the token' page.",
+            "status": "active"
+        },
+        {
+            "trait_id": "finance.trevo.wallet.nft_token_attributes",
+            "specification": "https://trevo-finance.github.io/trevo-traits-registry/traits/finance.trevo.wallet/nft_token_attributes/trait.json",
+            "description": "Attributes of an NFT displayed on the token' page.",
+            "status": "active"
+        },
+        {
+            "trait_id": "finance.trevo.wallet.price_feed",
+            "specification": "https://trevo-finance.github.io/trevo-traits-registry/traits/finance.trevo.wallet/price_feed/trait.json",
+            "description": "Information to get asset price.",
+            "status": "active"
+        }
+    ]
+}

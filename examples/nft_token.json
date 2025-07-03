@@ -1,0 +1,66 @@
+{
+    "metadata_id": "XYZ123",
+    "title": "Some title of the document",
+    "description": "Some description of the document",
+    "traits": {
+        "named": {
+            "name": "NFT token name"
+        },
+        "finance.trevo.wallet.square_icon": {
+            "image_url": "https://trevo-finance.github.io/trevo-traits-registry/examples/trait-logo-150.svg"
+        },
+        "finance.trevo.wallet.nft_token_listing_image": {
+            "image_url": "https://trevo-finance.github.io/trevo-traits-registry/examples/trait-logo-512.svg"
+        },
+        "finance.trevo.wallet.nft_token_cover_image": {
+            "image_url": "https://trevo-finance.github.io/trevo-traits-registry/examples/trait-logo-1920.svg"
+        },
+        "finance.trevo.wallet.nft_token_description": {
+            "nft_token_description": "Some description of the token displayed to the user of TRAIT wallet."
+        },
+        "finance.trevo.wallet.nft_token_attributes": {
+            "attributes": [
+                {
+                    "name": "Number attribute",
+                    "display_type": "number",
+                    "value": 123
+                },
+                {
+                    "name": "Percentage attribute",
+                    "display_type": "percentage",
+                    "value": -17
+                },
+                {
+                    "name": "String attribute",
+                    "display_type": "string",
+                    "value": "Some string"
+                },
+                {
+                    "name": "Boolean attribute",
+                    "display_type": "boolean",
+                    "value": true
+                },
+                {
+                    "name": "Date attribute 1",
+                    "display_type": "date",
+                    "value": "2018-11-13T20:20:39+00:00"
+                },
+                {
+                    "name": "Date attribute 2",
+                    "display_type": "date",
+                    "value": "2018-11-13"
+                },
+                {
+                    "name": "Date attribute 3",
+                    "display_type": "date",
+                    "value": "20:20:39+00:00"
+                },
+                {
+                    "name": "Duration attribute",
+                    "display_type": "duration",
+                    "value": "P3D"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "$id": "https://trevo-finance.github.io/trevo-traits-registry/traits/fungible/trait.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Details of a fungible token",
+    "description": "The trait provides essential info about a fungible token.",
+    "type": "object",
+    "properties": {
+      "symbol": {
+        "description": "The short symbol of the token.",
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 16
+      },
+      "decimals": {
+        "description": "The number of decimal places of the token.",
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 30
+      }
+    },
+    "required": [ "symbol", "decimals" ],
+    "additionalProperties": false
+}

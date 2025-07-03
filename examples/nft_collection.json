@@ -1,0 +1,16 @@
+{
+    "metadata_id": "ABCDEFG",
+    "title": "Some title of the document",
+    "description": "Some description of the document",
+    "traits": {
+        "named": {
+            "name": "NFT collection name"
+        },
+        "finance.trevo.wallet.square_icon": {
+            "image_url": "https://trevo-finance.github.io/trevo-traits-registry/examples/trait-logo-150.svg"
+        },
+        "finance.trevo.wallet.nft_collection_listing_image": {
+            "image_url": "https://trevo-finance.github.io/trevo-traits-registry/examples/trait-logo-512.svg"
+        }
+    }
+}
