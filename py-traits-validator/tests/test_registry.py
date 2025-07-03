@@ -116,3 +116,21 @@ def test_validation_of_traits() -> None:
         "finance.trevo.wallet.nft_token_description",
         "finance.trevo.wallet.nft_token_attributes",
     ]
+
+    # Validate metadata of compliance provider
+    with (TestConfig.EXAMPLE_META_DIR / "compliance_provider.json").open() as fp:
+        compliance_provider_meta = json.load(fp)
+    available_traits = validator.validate_metadata(compliance_provider_meta)
+    assert available_traits == [
+        "named",
+        "finance.trevo.wallet.square_icon",
+    ]
+
+    # Validate metadata of identity provider
+    with (TestConfig.EXAMPLE_META_DIR / "identity_provider.json").open() as fp:
+        identity_provider_meta = json.load(fp)
+    available_traits = validator.validate_metadata(identity_provider_meta)
+    assert available_traits == [
+        "named",
+        "finance.trevo.wallet.square_icon",
+    ]
